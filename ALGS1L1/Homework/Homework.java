@@ -1,22 +1,26 @@
 package Homework;
 
-public class Homework {
+public class  Homework{
     public static void main(String[] args) {
-        Account account = new Account();
-        account.put(1000);
-        System.out.println("Текущий баланс обычного счета: " + account.getAmount());
+        // Создаем экземпляр класса AbstractAccount
+        Account account = new AbstractAccount(1000);
+        System.out.println("Текущий баланс: " + account.getAmount()); // Выводит: Текущий баланс: 1000
 
-        CreditAccount creditAccount = new CreditAccount();
-        creditAccount.put(500);
-        creditAccount.take(200);
-        System.out.println("Текущий баланс кредитного счета: " + creditAccount.getAmount());
+        // Пополняем счет
+        account.put(500);
+        System.out.println("Текущий баланс после пополнения: " + account.getAmount()); // Выводит: Текущий баланс после пополнения: 1500
 
-        DepositAccount depositAccount = new DepositAccount();
-        depositAccount.put(2000);
-        depositAccount.take(1000);
-        System.out.println("Текущий баланс депозитного счета: " + depositAccount.getAmount());
+        // Снимаем средства со счета
+        account.take(200);
+        System.out.println("Текущий баланс после снятия: " + account.getAmount()); // Выводит: Текущий баланс после снятия: 1300
 
-        depositAccount.take(500); // Попытка снять средства второй раз в течение месяца
-        System.out.println("Текущий баланс депозитного счета: " + depositAccount.getAmount());
+        // Создаем экземпляр класса FixedAmountAccount
+        Account fixedAccount = new FixedAmountAccount(2000);
+        System.out.println("Текущий баланс фиксированного счета: " + fixedAccount.getAmount()); // Выводит: Текущий баланс фиксированного счета: 2000
+
+        // Попытка пополнения и снятия средств с фиксированного счета
+        fixedAccount.put(500);
+        fixedAccount.take(300);
+        System.out.println("Текущий баланс фиксированного счета: " + fixedAccount.getAmount()); // Выводит: Текущий баланс фиксированного счета: 2000 (баланс не изменился)
     }
 }

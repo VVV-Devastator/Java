@@ -1,7 +1,7 @@
 
 package Homework;
 
-public class Account {
+/* public class Account {
     private double balance;
 
     public void put(double amount) {
@@ -19,4 +19,9 @@ public class Account {
     public double getAmount() {
         return balance;
     }
-}
+}  */
+ public interface Account {
+    double getAmount();
+    void put(double amount);
+    void take(double amount);
+  }
