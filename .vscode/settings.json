@@ -1,0 +1,24 @@
+{
+    "java.project.sourcePaths": [
+        "Task3",
+        "Task2",
+        "L5T3",
+        "L5T2",
+        "L5T1",
+        "L4T3",
+        "L4T2",
+        "L4T1",
+        "L3T3",
+        "L3T2",
+        "L3T1",
+        "L2T2",
+        "L2T1",
+        "Attestation",
+        "ALGS4L4",
+        "ALGS1L3",
+        "ALGS1L1",
+        "ALGP2",
+        "ALGP1",
+        "lesson4/lesson4"
+    ]
+}
