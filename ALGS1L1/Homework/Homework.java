@@ -15,7 +15,7 @@ public class  Homework{
         account.take(200);
         System.out.println("Текущий баланс после снятия: " + account.getAmount()); // Выводит: Текущий баланс после снятия: 1300
 
-        // Снимаем средства со счета
+        
         CreditAccount creditAccount = new CreditAccount(); 
         creditAccount.put(500);
         creditAccount.take(200);
